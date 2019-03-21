@@ -35,7 +35,7 @@ spec:
     spec:
       containers:
       - name: jscalcfrontend
-        image: oestregistry.azurecr.io/jsfrontend:4250
+        image: oestregistry.azurecr.io/jsfrontend:#{Build.BuildId}
         imagePullPolicy: Always 
         ports:
           - containerPort: 80
@@ -84,7 +84,7 @@ spec:
     spec:
       containers:
       - name: calcbackend
-        image: oestregistry.azurecr.io/jsbackend:4250
+        image: oestregistry.azurecr.io/jsbackend:#{Build.BuildId}
         imagePullPolicy: Always 
         ports:
           - containerPort: 80
