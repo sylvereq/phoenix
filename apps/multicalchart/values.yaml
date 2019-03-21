@@ -8,7 +8,7 @@ dependencies:
   usePodRedis: yes
   redisSecret: rediscachesecret
   useAppInsights: no
-  appInsightsSecretValue: dummyValue
+  appInsightsSecretValue: 
   useIngress: no
 image:
   repository: denniszielke
