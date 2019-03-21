@@ -35,7 +35,7 @@ spec:
     spec:
       containers:
       - name: jscalcfrontend
-        image: denniszielke/js-calc-frontend:latest
+        image: oestRegistry/jsfrontend:4250
         imagePullPolicy: Always 
         ports:
           - containerPort: 80
@@ -84,38 +84,7 @@ spec:
     spec:
       containers:
       - name: calcbackend
-        image: denniszielke/js-calc-backend:latest
-        imagePullPolicy: Always 
-        ports:
-          - containerPort: 80
-            name: http         
-            protocol: TCP
-        env: 
-          - name: "PORT"
-            value: "80"
----
-apiVersion: extensions/v1beta1
-kind: Deployment
-metadata:
-  name: gocalcbackend
-spec:
-  replicas: 3
-  minReadySeconds: 5
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxSurge: 1
-      maxUnavailable: 1
-  template:
-    metadata:
-      labels:
-        name: gocalcbackend
-        role: calcbackend
-        app: calculator
-    spec:
-      containers:
-      - name: gocalcbackend
-        image: denniszielke/go-calc-backend:latest
+        image: oestRegistry/jsfrontend:4250
         imagePullPolicy: Always 
         ports:
           - containerPort: 80
