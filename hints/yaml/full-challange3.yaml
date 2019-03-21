@@ -84,7 +84,7 @@ spec:
     spec:
       containers:
       - name: calcbackend
-        image: oestRegistry/jsfrontend:4250
+        image: oestRegistry/jsbackend:4250
         imagePullPolicy: Always 
         ports:
           - containerPort: 80
