@@ -11,10 +11,10 @@ dependencies:
   appInsightsSecretValue: 
   useIngress: no
 image:
-  repository: denniszielke
-  frontendImage: js-calc-frontend
+  repository: oestregistry.azurecr.io
+  frontendImage: jsfrontend
   frontendTag: latest
-  backendImage: js-calc-backend
+  backendImage: jsbackend
   backendTag: latest
   pullPolicy: IfNotPresent
   pullSecret: kuberegistry
